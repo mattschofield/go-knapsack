@@ -51,7 +51,7 @@ func Knapsack(items []Packable, capacity int64) []int64 {
 			// Does the item fit at this capacity?
 			itemFits := (items[i-1].Weight() <= c)
 			if !itemFits {
-				continue
+				continue // skip this iteration
 			}
 
 			// Is the value of the item, plus the (previously calculated) value of
